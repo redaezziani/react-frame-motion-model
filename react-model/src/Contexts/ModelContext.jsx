@@ -1,7 +1,5 @@
-// ModelContext.js
-import React, { createContext, useContext, useState } from 'react';
+import  { createContext, useContext, useState } from "react";
 
-// Create the context
 const ModelContext = createContext();
 
 export const ModelProvider = ({ children }) => {
@@ -21,7 +19,7 @@ export const ModelProvider = ({ children }) => {
 export const useModel = () => {
   const context = useContext(ModelContext);
   if (!context) {
-    throw new Error('useModel must be used within a ModelProvider');
+    throw new Error("useModel must be used within a ModelProvider");
   }
   return context;
 };
