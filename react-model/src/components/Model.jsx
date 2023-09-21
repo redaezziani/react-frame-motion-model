@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { useModel } from "../Contexts/ModelContext";
-
+import PropTypes from 'prop-types';
+//lets make a type check for our model
+Model.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+  type: PropTypes.string,
+};
 const Model = ({ title, content, type = "default" }) => {
   const { isOpen, toggleModel } = useModel();
   const handleClose = () => {
