@@ -1,13 +1,15 @@
 
 import './App.css'
-
+import Model from './components/Model'
 function App() {
  
 
   return (
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+    <div
+    className='flex items-center justify-center min-h-screen bg-gray-200 relative'
+    >
+      <Model />
+    </div>
   )
 }
 
