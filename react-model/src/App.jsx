@@ -4,9 +4,9 @@ import Model from "./components/Model";
 import { useModel, ModelProvider } from "./Contexts/ModelContext";
 
 function App() {
-  const { isOpen, toggleModel } = useModel(); // useModel is a custom hook
-  const title = "Simple Model";
-  const type = "blur";
+  const { isOpen, toggleModel } = useModel(); 
+  const title = "Simple Model"; 
+  const type = "blur";//simple note if you dont want to use blur effect then use "none" to set mode default
   const content =
     "This is a simple model component made with react and framer-motion library to show how to use react with framer-motion.";
 
