@@ -11,7 +11,7 @@ function App() {
     "This is a simple model component made with react and framer-motion library to show how to use react with framer-motion.";
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-200 relative">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
       <button
         onClick={toggleModel}
         className="rounded-md text-white dark:text-slate-100 min-w-[5rem] bg-slate-800 px-3 py-[0.38rem]"
