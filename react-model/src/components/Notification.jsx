@@ -30,7 +30,7 @@ const Notification = ({ title, content, type = ""}) => {
         
         ">
           {
-            type==='error'?   <IoWarningOutline className="text-red-800/70 text-3xl"/> : <AiOutlineCheckCircle className="text-emerald-600/70 text-3xl"/>
+            type==='error'?<IoWarningOutline className="text-red-800/70 text-3xl"/> : <AiOutlineCheckCircle className="text-emerald-600/70 text-3xl"/>
           }
           <p
             className={`font-semibold text-slate-500 dark:text-slate-100`}
