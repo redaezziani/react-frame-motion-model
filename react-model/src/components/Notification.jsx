@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import {IoWarningOutline} from 'react-icons/io5'
+import {AiOutlineCheckCircle} from 'react-icons/ai'
 import { useModel } from "../Contexts/ModelContext";
 
-const Notification = ({ title, content, type = "error"}) => {
+const Notification = ({ title, content, type = ""}) => {
   const { isOpen, toggleModel } = useModel();
   const handleClose = () => {
     toggleModel();
@@ -28,9 +29,11 @@ const Notification = ({ title, content, type = "error"}) => {
         <div className="flex flex-col sm:flex-row gap-2 w-full  sm:items-center sm:justify-start items-center justify-center
         
         ">
-            <IoWarningOutline className="text-red-800/70 text-3xl"/>
-            <p
-            className='font-semibold text-slate-500 dark:text-slate-100'
+          {
+            type==='error'?   <IoWarningOutline className="text-red-800/70 text-3xl"/> : <AiOutlineCheckCircle className="text-emerald-600/70 text-3xl"/>
+          }
+          <p
+            className={`font-semibold text-slate-500 dark:text-slate-100`}
             >
               {title}
             </p>
@@ -47,7 +50,7 @@ const Notification = ({ title, content, type = "error"}) => {
       <div className="w-full flex sm:mt-2 mt-4 justify-end gap-3 items-center">
         <button
           onClick={handleClose}
-          className={`rounded-md w-full md:w-fit  sm:min-w-[5rem] ${!type==='error' ? ' bg-emerald-500/40 backdrop-blur-sm text-emerald-600': 'bg-red-500/40 text-red-800 backdrop-blur-sm'}    px-3 py-2`}
+          className={`rounded-md w-full md:w-fit  sm:min-w-[5rem] ${type==='error' ?  'bg-red-500/40 text-red-800 backdrop-blur-sm' : ' bg-emerald-500/40 backdrop-blur-sm text-emerald-600'}    px-3 py-2`}
         >
           Confirme
         </button>

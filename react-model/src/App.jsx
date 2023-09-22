@@ -8,7 +8,7 @@ function App() {
   const { isOpen, toggleModel } = useModel(); 
   const title = "Simple Model"; 
   //const type = "blur";//simple note if you dont want to use blur effect then use "none" to set mode default
-  const NotifacationType="error";
+  const NotifacationType="";
   const content ="this is a simple model component that you can use in your project like a notification or a simple model.";
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
