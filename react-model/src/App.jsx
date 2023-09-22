@@ -1,15 +1,15 @@
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
-import Model from "./components/Model";
+//import Model from "./components/Model";
+import Notification from "./components/Notification";
 import { useModel, ModelProvider } from "./Contexts/ModelContext";
 
 function App() {
   const { isOpen, toggleModel } = useModel(); 
   const title = "Simple Model"; 
-  const type = "blur";//simple note if you dont want to use blur effect then use "none" to set mode default
-  const content =
-    "This is a simple model component made with react and framer-motion library to show how to use react with framer-motion.";
-
+  //const type = "blur";//simple note if you dont want to use blur effect then use "none" to set mode default
+  const NotifacationType="error";
+  const content ="this is a simple model component that you can use in your project like a notification or a simple model.";
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
       <button
@@ -20,7 +20,7 @@ function App() {
       </button>
       <AnimatePresence>
         {isOpen && (
-          <Model title={title} Open={isOpen} type={type} content={content} />
+          <Notification title={title} content={content} type={NotifacationType} />
         )}
       </AnimatePresence>
     </div>

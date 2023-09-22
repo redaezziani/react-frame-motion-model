@@ -2,9 +2,7 @@ import  { createContext, useContext, useState } from "react";
 import PropTypes from 'prop-types';
 
 const ModelContext = createContext();
-ModelProvider.propTypes = {
-  children: PropTypes.node,
-};
+
 
 export const ModelProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
